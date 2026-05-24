@@ -1,5 +1,4 @@
-import { defaultTemplates } from "portfolio-studio-default/src";
-import { DefaultPortfolioRenderer } from "portfolio-studio-default/src";
+import { defaultTemplates, DefaultPortfolioRenderer } from "portfolio-studio-default/src";
 import {
   premiumTemplates,
   PremiumPortfolioRenderer,

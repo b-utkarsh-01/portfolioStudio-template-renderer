@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "src/index.jsx"
+  "main": "src/index.jsx",
+  "dependencies": {
+    "portfolio-studio-default": "git+https://github.com/b-utkarsh-01/portfolioStudio-default.git",
+    "portfolio-studio-premium": "git+https://github.com/b-utkarsh-01/portfolioStudio-premium.git"
+  }
 }
