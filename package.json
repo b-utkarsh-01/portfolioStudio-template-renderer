@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.jsx",
   "dependencies": {
-    "portfolio-studio-default": "git+https://github.com/b-utkarsh-01/portfolioStudio-default.git",
-    "portfolio-studio-premium": "git+https://github.com/b-utkarsh-01/portfolioStudio-premium.git"
+    "portfolio-studio-default": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-default/tar.gz/main",
+    "portfolio-studio-premium": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-premium/tar.gz/main?rev=140032d"
   }
 }
