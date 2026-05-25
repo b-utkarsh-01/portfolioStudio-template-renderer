@@ -1,17 +1,17 @@
-import { defaultTemplates, DefaultPortfolioRenderer } from "portfolio-studio-default/src";
+import { defaultTemplates, DefaultPortfolioRenderer } from "portfolio-studio-default";
 import {
   premiumTemplates,
   PremiumPortfolioRenderer,
   PortfolioDataProvider,
   TemplateV1Layout,
-} from "portfolio-studio-premium/src";
+} from "portfolio-studio-premium";
 
 const TEMPLATE_CATALOG = [...defaultTemplates, ...(Array.isArray(premiumTemplates) ? premiumTemplates : [])];
 
 const getTemplateById = (templateId) =>
   TEMPLATE_CATALOG.find((template) => template.id === templateId) || TEMPLATE_CATALOG[0];
 
-const TemplatePortfolioRenderer = ({ appReady, templateId = "default-v1", portfolioData = null }) => {
+const TemplatePortfolioRenderer = ({ appReady, templateId = "default-horizon", portfolioData = null }) => {
   const data = portfolioData || null;
   const isDefaultTemplate = `${templateId}`.startsWith("default-");
 
