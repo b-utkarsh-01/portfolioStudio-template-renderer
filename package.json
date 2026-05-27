@@ -6,6 +6,6 @@
   "main": "src/index.jsx",
   "dependencies": {
     "portfolio-studio-default": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-default/tar.gz/main?rev=1f7a95d",
-    "portfolio-studio-premium": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-premium/tar.gz/main?rev=ec790e5"
+    "portfolio-studio-premium": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-premium/tar.gz/main?rev=1f001ff"
   }
 }
