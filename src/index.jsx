@@ -5,6 +5,12 @@ import {
   PortfolioDataProvider,
   TemplateV1Layout,
 } from "portfolio-studio-premium";
+import AiHero from "./components/AiHero.jsx";
+import AiSkills from "./components/AiSkills.jsx";
+import AiExperience from "./components/AiExperience.jsx";
+import AiProjects from "./components/AiProjects.jsx";
+import AiEducation from "./components/AiEducation.jsx";
+import AiContact from "./components/AiContact.jsx";
 
 const TEMPLATE_CATALOG = [...defaultTemplates, ...(Array.isArray(premiumTemplates) ? premiumTemplates : [])];
 
@@ -72,81 +78,17 @@ const TemplatePortfolioRenderer = ({ appReady, templateId = "default-horizon", p
     const renderSection = (section) => {
       switch (`${section?.type || ""}`) {
         case "hero":
-          return (
-            <section key={section.id} style={cardStyle}>
-              <h1 style={{ margin: 0, color: palette.primary || "#22d3ee" }}>{profile?.name || "Portfolio"}</h1>
-              <p style={{ margin: "8px 0 0 0", opacity: 0.85 }}>
-                {profile?.summary || "AI-generated dynamic portfolio"}
-              </p>
-            </section>
-          );
+          return <AiHero key={section.id} profile={profile} palette={palette} cardStyle={cardStyle} />;
         case "skills":
-          return (
-            <section key={section.id} style={cardStyle}>
-              <h2 style={{ marginTop: 0 }}>Skills</h2>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                {skills.flatMap((group) => group?.items || []).map((item, idx) => (
-                  <span
-                    key={`${section.id}-skill-${idx}`}
-                    style={{
-                      border: `1px solid ${palette.border || "#334155"}`,
-                      borderRadius: "999px",
-                      padding: "6px 10px",
-                      fontSize: "13px",
-                    }}
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </section>
-          );
+          return <AiSkills key={section.id} skills={skills} palette={palette} cardStyle={cardStyle} />;
         case "experience":
-          return (
-            <section key={section.id} style={cardStyle}>
-              <h2 style={{ marginTop: 0 }}>Experience</h2>
-              {experiences.map((item, idx) => (
-                <div key={`${section.id}-exp-${idx}`} style={{ marginBottom: "10px" }}>
-                  <strong>{item?.role || item?.title || "Role"}</strong>
-                  <div style={{ opacity: 0.85 }}>{item?.company || ""}</div>
-                  <p style={{ margin: "4px 0 0 0", opacity: 0.9 }}>{item?.description || ""}</p>
-                </div>
-              ))}
-            </section>
-          );
+          return <AiExperience key={section.id} experiences={experiences} cardStyle={cardStyle} />;
         case "projects":
-          return (
-            <section key={section.id} style={cardStyle}>
-              <h2 style={{ marginTop: 0 }}>Projects</h2>
-              {projects.map((item, idx) => (
-                <div key={`${section.id}-proj-${idx}`} style={{ marginBottom: "10px" }}>
-                  <strong>{item?.title || item?.name || "Project"}</strong>
-                  <p style={{ margin: "4px 0 0 0", opacity: 0.9 }}>{item?.description || ""}</p>
-                </div>
-              ))}
-            </section>
-          );
+          return <AiProjects key={section.id} projects={projects} cardStyle={cardStyle} />;
         case "education":
-          return (
-            <section key={section.id} style={cardStyle}>
-              <h2 style={{ marginTop: 0 }}>Education</h2>
-              {education.map((item, idx) => (
-                <div key={`${section.id}-edu-${idx}`} style={{ marginBottom: "8px" }}>
-                  <strong>{item?.institution || item?.school || "Institute"}</strong>
-                  <div style={{ opacity: 0.85 }}>{item?.degree || ""}</div>
-                </div>
-              ))}
-            </section>
-          );
+          return <AiEducation key={section.id} education={education} cardStyle={cardStyle} />;
         case "contact":
-          return (
-            <section key={section.id} style={cardStyle}>
-              <h2 style={{ marginTop: 0 }}>Contact</h2>
-              {contacts.map((contact, idx) => (
-                <div key={`${section.id}-contact-${idx}`}>{contact?.text || contact?.href || ""}</div>
-              ))}
-            </section>
-          );
+          return <AiContact key={section.id} contacts={contacts} cardStyle={cardStyle} />;
         default:
           return null;
       }
