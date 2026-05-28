@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.jsx",
   "dependencies": {
-    "portfolio-studio-default": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-default/tar.gz/3af45e7496a6b900ecffc4528fb6047502f75015",
-    "portfolio-studio-premium": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-premium/tar.gz/1f001ff682710c20108421fc8b9e78dacf444c69"
+    "portfolio-studio-default": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-default/tar.gz/d35d1422cc0bbd06132ee7e2597f124c709aba03",
+    "portfolio-studio-premium": "https://codeload.github.com/b-utkarsh-01/portfolioStudio-premium/tar.gz/e31e987d6870a9d64e7e47275c2d6ddac0e50bb4"
   }
 }
